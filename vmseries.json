@@ -244,7 +244,7 @@
       "location": "[resourceGroup().location]"
     },
     {
-      "name": "[concat('SettingUpPublicIPs', copyindex(0))]",
+      "name": "[concat('SettingUpPublicIPs', copyindex())]",
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2015-01-01",
       "copy": {
@@ -262,7 +262,7 @@
             "value": "[variables('location')]"
           },
           "MgmtPublicIPAddressName": {
-            "value": "[concat(parameters('MgmtPublicIPAddressName'),copyindex(1))]"
+            "value": "[concat(parameters('MgmtPublicIPAddressName'),copyindex())]"
           },
           "publicIPAddressType": {
             "value": "[variables('publicIPAddressType')]"
@@ -295,7 +295,7 @@
             "value": "[variables('location')]"
           },
           "nicName": {
-            "value": "[concat(variables('nicName'), copyindex(1))]"
+            "value": "[concat(variables('nicName'), copyindex())]"
           },
           "subnet0Name": {
             "value": "[parameters('subnet0Name')]"
@@ -313,7 +313,7 @@
             "value": "[parameters('virtualNetworkExistingRGName')]"
           },
           "MgmtPublicIPAddressName": {
-            "value": "[concat(parameters('MgmtPublicIPAddressName'), copyindex(1))]"
+            "value": "[concat(parameters('MgmtPublicIPAddressName'), copyindex())]"
           },
           "baseUrl": {
             "value": "[parameters('baseUrl')]"
@@ -322,7 +322,7 @@
       }
     },
     {
-      "name": "[concat('VMSeries-Firewall-VM', copyindex(1))]",
+      "name": "[concat('VMSeries-Firewall-VM', copyindex())]",
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2015-01-01",
       "dependsOn": [
@@ -345,7 +345,7 @@
             "value": "[variables('location')]"
           },
           "vmName": {
-            "value": "[concat(parameters('vmName'), copyindex(1))]"
+            "value": "[concat(parameters('vmName'), copyindex())]"
           },
           "availabilitySetName": {
             "value": "[variables('availabilitySetName')]"
