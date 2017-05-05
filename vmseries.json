@@ -244,7 +244,7 @@
       "location": "[resourceGroup().location]"
     },
     {
-      "name": "[concat('SettingUpPublicIPs', copyindex(1))]",
+      "name": "[concat('SettingUpPublicIPs', copyindex(0))]",
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2015-01-01",
       "copy": {
@@ -274,7 +274,7 @@
       }
     },
     {
-      "name": "[concat('SetupNetworkInterfaces', copyindex(1))]",
+      "name": "[concat('SetupNetworkInterfaces', copyindex())]",
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2015-01-01",
       "dependsOn": [
